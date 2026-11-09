@@ -1,0 +1,17 @@
+
+print(" MULTIPLICATION AND DIVISION ")
+
+number = int(input("Enter a number: "))
+limit = int(input("Enter the table limit: "))
+
+print("\nMULTIPLICATION TABLE")
+
+for i in range(1, limit + 1):
+    print(number, "x", i, "=", number * i)
+
+print("\nDIVISION TABLE")
+
+for i in range(1, limit + 1):
+    print(number, "/", i, "=", number / i)
+
+print("\n END OF TABLE ")

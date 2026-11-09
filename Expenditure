@@ -1,0 +1,35 @@
+
+print("==============================================")
+print("              SHOPPING RECEIPT")
+print("==============================================")
+
+number = int(input("Enter the number of items bought: "))
+
+total_expenditure = 0
+items = []
+
+for i in range(number):
+    print("\nItem", i + 1)
+
+    description = input("Enter item name: ")
+    quantity = int(input("Enter quantity: "))
+    unit_price = float(input("Enter unit price: "))
+
+    total_price = quantity * unit_price
+
+    total_expenditure = total_expenditure + total_price
+
+    items.append([description, quantity, unit_price, total_price])
+
+print("\n")
+print("================== RECEIPT ==================")
+print(f"{'S/N':<5}{'Description':<16}{'Quantity':<10}{'Unit Price':<13}{'Total Price'}")
+print("--------------------------------------------------------------")
+
+for i in range(number):
+    print(f"{i+1:<5}{items[i][0]:<16}{items[i][1]:<10}{items[i][2]:<13.2f}{items[i][3]:.2f}")
+
+print("--------------------------------------------------------------")
+print(f"Total Expenditure: {total_expenditure:.2f}")
+print("==============================================================")
+print("             THANK YOU FOR SHOPPING!")
